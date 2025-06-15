@@ -24,6 +24,7 @@ export default function SwipeButton({
   buttonText,
   onSwipeStart,
   onSwipeEnd,
+  icon,
 }) {
   const translateX = useSharedValue(0);
   const containerWidth = useSharedValue(0);
@@ -84,7 +85,7 @@ export default function SwipeButton({
         </View>
         <GestureDetector gesture={panGesture}>
           <Animated.View style={[styles.swipeArea, swipeAreaStyle]}>
-            <Ionicons name="checkmark" size={34} color="black" />
+            {icon ?? <Ionicons name="checkmark" size={34} color="black" />}
           </Animated.View>
         </GestureDetector>
 
@@ -109,15 +110,7 @@ const styles = StyleSheet.create({
     position: "relative",
     overflow: "hidden",
   },
-  background: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "white",
-    borderRadius: 45,
-  },
+
   swipeArea: {
     height: 70,
     width: 70,
