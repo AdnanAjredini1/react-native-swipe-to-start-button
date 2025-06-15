@@ -32,8 +32,13 @@ npm install react-native-swipe-to-start
 npm install react-native-swipe-to-start-button
 # or
 yarn add react-native-swipe-to-start
+```
 
 ---
+
+
+
+
 
 
 ## 🧩 Usage
@@ -53,6 +58,8 @@ export default function App() {
     />
   );
 }
+
+```
 
 ---
 
