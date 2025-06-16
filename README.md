@@ -1,4 +1,4 @@
-# react-native-swipe-to-start
+# react-native-swipe-to-start-button
 
 # 🚀 React Native Swipe Button
 
