@@ -27,11 +27,10 @@ A beautiful, animated swipe button for React Native using `react-native-reanimat
 ## 📦 Installation
 
 ```bash
-npm install react-native-swipe-to-start
-# or
+
 npm install react-native-swipe-to-start-button
 # or
-yarn add react-native-swipe-to-start
+yarn add react-native-swipe-to-start-button
 ```
 
 ---
