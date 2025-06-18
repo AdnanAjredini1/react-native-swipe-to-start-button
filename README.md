@@ -64,7 +64,7 @@ export default function App() {
 
 ## 🛠 Props
 
-            | Prop                   | Type      | Description                                                           |
+| Prop                   | Type      | Description                                                           |
 | ---------------------- | --------- | --------------------------------------------------------------------- |
 | `buttonText`           | string    | Label shown in the center                                             |
 | `onSwipeStart`         | function  | Called when swipe starts                                              |
