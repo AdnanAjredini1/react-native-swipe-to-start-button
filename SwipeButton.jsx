@@ -25,6 +25,8 @@ export default function SwipeButton({
   onSwipeStart,
   onSwipeEnd,
   icon,
+  swipeAreaStyles,
+  arrowsContainerStyle,
 }) {
   const translateX = useSharedValue(0);
   const containerWidth = useSharedValue(0);
@@ -73,7 +75,7 @@ export default function SwipeButton({
           containerWidth.value = e.nativeEvent.layout.width;
         }}
       >
-        <View style={{ position: "absolute", right: 20, flexDirection: "row" }}>
+        <View style={[styles.arrowsContainer, arrowsContainerStyle]}>
           <SimpleLineIcons name="arrow-right" size={24} color="#bdbaba" />
           <SimpleLineIcons
             name="arrow-right"
@@ -84,7 +86,9 @@ export default function SwipeButton({
           <SimpleLineIcons name="arrow-right" size={24} color="black" />
         </View>
         <GestureDetector gesture={panGesture}>
-          <Animated.View style={[styles.swipeArea, swipeAreaStyle]}>
+          <Animated.View
+            style={[styles.swipeArea, swipeAreaStyle, swipeAreaStyles]}
+          >
             {icon ?? <Ionicons name="checkmark" size={34} color="black" />}
           </Animated.View>
         </GestureDetector>
@@ -109,6 +113,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     position: "relative",
     overflow: "hidden",
+  
   },
 
   swipeArea: {
@@ -121,6 +126,12 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 10,
     zIndex: 2,
+  },
+  arrowsContainer: {
+    position: "absolute",
+    right: 20,
+    flexDirection: "row",
+    zIndex: 0,
   },
   textContainer: {
     position: "absolute",
