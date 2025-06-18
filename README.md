@@ -64,11 +64,15 @@ export default function App() {
 
 ## 🛠 Props
 
-| Prop             | Type      | Description                                                           |
-| ---------------- | --------- | --------------------------------------------------------------------- |
-| `buttonText`     | string    | Label shown in the center                                             |
-| `onSwipeStart`   | function  | Called when swipe starts                                              |
-| `onSwipeEnd`     | function  | Called when swipe completes                                           |
-| `containerStyle` | object    | Override container styles                                             |
-| `textStyle`      | object    | Override text style                                                   |
-| `icon`           | ReactNode | Custom icon to display inside swipe knob (defaults to checkmark icon) |
+            | Prop                   | Type      | Description                                                           |
+| ---------------------- | --------- | --------------------------------------------------------------------- |
+| `buttonText`           | string    | Label shown in the center                                             |
+| `onSwipeStart`         | function  | Called when swipe starts                                              |
+| `onSwipeEnd`           | function  | Called when swipe completes                                           |
+| `containerStyle`       | object    | Override container styles                                             |
+| `textStyle`            | object    | Override text style                                                   |
+| `icon`                 | ReactNode | Custom icon to display inside swipe knob (defaults to checkmark icon) |
+| `swipeAreaStyles`      | object    | Override swipe area style                                             |
+| `arrowsContainerStyle` | object    | Override arrows container style                                       |
+
+
